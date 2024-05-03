@@ -1,0 +1,14 @@
+{
+  "name": "nextjs-mf",
+  "private": true,
+  "description": "Module Federation prototype with Next.js",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "concurrently \"npm --prefix home run dev\" \"npm --prefix checkout run dev\" \"npm --prefix locations run dev\"",
+    "build": "concurrently \"npm --prefix home run build\" \"npm --prefix checkout run build\" \"npm --prefix locations run build\"",
+    "serve": "concurrently \"npm --prefix home run start\" \"npm --prefix checkout run start\" \"npm --prefix locations run start\""
+  },
+  "dependencies": {
+    "concurrently": "8.2.2"
+  }
+}
