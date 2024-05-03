@@ -22,7 +22,6 @@ const nextConfig = {
   reactStrictMode: true,
   webpack: (config, options) => {
     const { isServer } = options;
-    config.optimization.runtimeChunk = "single";
     config.plugins.push(
       new NextFederationPlugin(federationConfig(isServer)),
       new FederatedTypesPlugin({
